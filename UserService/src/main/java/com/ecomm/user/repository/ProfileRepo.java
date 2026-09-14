@@ -1,0 +1,23 @@
+package com.ecomm.user.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.ecomm.user.entity.Profile;
+import com.ecomm.user.entity.User;
+import java.util.List;
+
+
+
+
+@Repository
+public interface ProfileRepo  extends JpaRepository<Profile, Integer>{
+
+
+	Optional<Profile> findByUserUserId(Integer userId);
+	
+
+}
